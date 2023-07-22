@@ -1,2 +1,2 @@
 # pstackebrandt.github.io
-A homepage I want to host with github pages.
+This is a small homepage in react I want to host with github pages.
