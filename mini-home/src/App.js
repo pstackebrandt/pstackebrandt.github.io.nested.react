@@ -1,23 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.css';
+// import ShowSenderTeam from './show-sender-team';
+// import EyeCatcher from './components/eye-catcher';
+import PageTitle from './components/page-title';
+// import TopNavBar from './components/top-nav-bar';
+// import BottomNav from './components/bottom-nav';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+  function Header() {
+    return (
+      <header>
+        {/* <TopNavBar /> */}
+        <PageTitle />
       </header>
+    );
+  }
+  // function MainContent() {
+  //         return (
+  //           <main>
+  //             Main
+  //           </main>
+  //         );
+  //       }
+
+  // function Footer() {
+  //   return (
+  //     <footer>
+  //       <BottomNav />
+  //     </footer>
+  //   );
+  // }
+
+  return (
+    <div className="app">
+      <Header />
+      {/* <MainContent /> */}
+      {/* <Footer /> */}
     </div>
   );
 }
