@@ -3,12 +3,11 @@
 //ReactRouter Imports
 import { Outlet } from 'react-router-dom'
 
+// styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import TopNav from '../pages/top-nav';
-import PageTitle from '../pages/page-title';
 import BottomNav from '../pages/bottom-nav';
-
 
 /**
  * Repräsentiert das Hauptlayout,
@@ -24,24 +23,27 @@ export default function RootLayout() {
         return (
             <header className="text-center">
                 <TopNav />
-                <PageTitle />
             </header>
         );
     }
 
     function MainContent() {
         return (
-            <main className="text-center">
-                <Outlet />
-            </main>
+            <>
+                <main className="text-center">
+                  
+
+                    <Outlet />
+                </main>
+            </>
         );
     }
 
     function Footer() {
         return (
-            <header className="text-center">
+            <footer className="text-center fixed-bottom">
                 <BottomNav />
-            </header>
+            </footer>
         );
     }
 
