@@ -27,7 +27,7 @@ function CustomLink({ to, children, ...props }) {
 // The main TopNav component
 function TopNav() {
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar expand="lg">
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">

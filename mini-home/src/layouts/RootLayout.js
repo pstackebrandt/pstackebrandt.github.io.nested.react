@@ -1,8 +1,10 @@
 // file: RootLayout.js
 
 //ReactRouter Imports
-import { NavLink, Outlet } from 'react-router-dom'
-import { Nav } from 'react-bootstrap';
+import { Outlet } from 'react-router-dom'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import TopNav from '../pages/top-nav';
 import PageTitle from '../pages/page-title';
 import BottomNav from '../pages/bottom-nav';
@@ -20,7 +22,7 @@ export default function RootLayout() {
     function Header() {
 
         return (
-            <header>
+            <header className="text-center">
                 <TopNav />
                 <PageTitle />
             </header>
@@ -29,7 +31,7 @@ export default function RootLayout() {
 
     function MainContent() {
         return (
-            <main>
+            <main className="text-center">
                 <Outlet />
             </main>
         );
@@ -37,14 +39,9 @@ export default function RootLayout() {
 
     function Footer() {
         return (
-            <footer>
-                <p>Footer von RH</p>
-                <Nav>
-                    {/* todo use component bottom-nav */}
-                    <NavLink to="/" as={Nav.Link}>Home</NavLink>
-                    <NavLink to="/impressum" as={Nav.Link}>Impressum</NavLink>
-                </Nav>
-            </footer>
+            <header className="text-center">
+                <BottomNav />
+            </header>
         );
     }
 
@@ -52,7 +49,7 @@ export default function RootLayout() {
         <div className="root-layout">
             <Header />
             <MainContent />
-            <BottomNav />
+            <Footer />
         </div>
     );
 }
