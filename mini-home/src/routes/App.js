@@ -16,11 +16,8 @@ import RootLayout from "../layouts/RootLayout";
 import ImpressLayout from "../layouts/ImpressLayout";
 
 // Pages
-import TopNav from '../pages/top-nav';
-import PageTitle from '../pages/page-title';
 import Impress from '../pages/Impress';
 import Welcome from "../pages/Welcome";
-import BottomNav from '../pages/bottom-nav';
 
 import Error from "../pages/errors/Error";
 import NotFound from "../pages/NotFound";
@@ -47,38 +44,8 @@ const router = createBrowserRouter(
 
 function App() {
 
-  function Header() {
-    return (
-      <header>
-        {/* <TopNav /> */}
-        <PageTitle />
-      </header>
-    );
-  }
-
-  // function MainContent() {
-  //         return (
-  //           <main>
-  //             <h1>Main</h1>
-  //           </main>
-  //         );
-  //       }
-
-  // function Footer() {
-  //   return (
-  //     <footer>
-  //       <BottomNav />
-  //     </footer>
-  //   );
-  // }
-
   return (
     <RouterProvider router={router} />
-    // <div className="app">
-    //   <Header />
-    //   {/* <MainContent /> */}
-    //   <BottomNav />
-    // </div>
   );
 }
 
