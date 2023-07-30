@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>Redirecting...</title>
     <script>
-      if (window.location.pathname !== '/index.html') {
-        var location = window.location.href.replace(window.location.pathname, '') + '/index.html' + window.location.pathname + window.location.search;
+      if (window.location.pathname !== '/mini-home/index.html') {
+        var location = window.location.origin + '/mini-home/index.html' + window.location.pathname.replace('/mini-home', '') + window.location.search;
         window.location.replace(location);
       }
     </script>
@@ -13,3 +13,4 @@
   <body>
   </body>
 </html>
+
