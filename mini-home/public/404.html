@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Nehmen Sie die aktuelle URL und ersetzen Sie den Pfad mit '/index.html'
+      var location = window.location.href.replace(window.location.pathname, '') + '/index.html' + window.location.pathname + window.location.search;
+      window.location.replace(location);
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
