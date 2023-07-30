@@ -1,8 +1,5 @@
 import React from "react"
 
-// styles
-import 'bootstrap/dist/css/bootstrap.min.css';
-
 import PageTitle from '../pages/page-title';
 
 // Main content of the page
