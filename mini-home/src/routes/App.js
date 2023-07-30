@@ -24,6 +24,8 @@ import Welcome from "../pages/Welcome";
 import Error from "../pages/errors/Error";
 import NotFound from "../pages/NotFound";
 
+const BASENAME = process.env.PUBLIC_URL;
+
 /*
 * Welcome == Hauptseite
 * NotFound == Wenn eine URL angefragt wird die nicht existiert wird diese Seite aufgerufen.
@@ -32,17 +34,15 @@ import NotFound from "../pages/NotFound";
  */
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />} errorElement={<Error />}>
+    <Route path={`${BASENAME}/`} element={<RootLayout />} errorElement={<Error />}>
       <Route index element={<Welcome />} />
-            
       <Route path="impress" element={<ImpressLayout />}>
         <Route index element={<Impress />} />
       </Route>
-
       <Route path="*" element={<NotFound />} />
     </Route>
   )
-)
+);
 
 function App() {
 
